@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: "montserrat" , "Fraunces" , serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.card .card-content{
+    width: 300px;
+    height: 450px;
+    padding: 30px;
+    background-color: white;
+}
+
+@media (max-width: 767px){
+    .card .image{
+        content: url(../images/image-product-mobile.jpg);
+        height: 40%;
+    }
+    .card{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .card .card-content{
+        width: 100%
+    }
+}
+.card-content .details .title{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.card-content .details .description{
+    font-family: fraunces;
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.card-content .details .component{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.card-content .price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+.card-content .price .old{
+    font-size: 30px;
+    font-family: fraunces;
+    color: hsl(158, 36%, 37%);
+}
+.card-content .price .new{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+.card-content .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    padding: 13px;
+    font-size: 14px;
+    gap: 0.8rem;
+}
+.card-content .btn:active{
+    background-color: hsl(158, 36%, 20%);
+    cursor: pointer;
+}
